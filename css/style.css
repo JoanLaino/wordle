@@ -1,0 +1,38 @@
+.stl-palabra {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 300px;
+}
+
+.stl-letra {
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+
+.stl-button {
+    margin-top: 5%;
+    font-size: 20px;
+    border: 2px solid mediumblue;
+    border-radius: 5px;
+    background-color: blue;
+    color: #FFFFFF;
+    font-weight:600;
+    padding: 8px;
+}
+
+.stl-button:hover {
+    cursor: pointer;
+    background-color: #FFFFFF;
+    color: blue;
+    transition-delay: 0.1s;
+}
+
+.correcta {
+    background-color: springgreen;
+}
