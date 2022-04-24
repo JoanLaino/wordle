@@ -59,30 +59,48 @@ $('#btnEnviar').on('click', function (event) {
     var vectorPalabra = palabraReal.split('');
     
     var ban = "0";
+    var banDos = 1;
 
     for (var i = 0; i < 5; i++) {
 
         if (ban == "0") {
             ban = l1;
         } else if (ban == l1) {
-            ban = l2.val();
+            ban = l2;
+            banDos = 2;
         }
         if (ban == l2) {
             ban = l3;
+            banDos = 3;
         }
         if (ban == l3) {
             ban = l4;
+            banDos = 4;
         }
         if (ban == l4) {
             ban = l5;
+            banDos = 5;
         }
-
-        for (var i = 0; i < 5; i++) {
-
-            if (ban === vectorPalabra[i]) {
-                $("#lUno").addClass("correcta");
-               
-                //Esto está de prueba, hay que hacer la lógica para que sea dínamico.
+        console.log(ban, banDos);
+        for (var x = 0; x < 5; x++) {
+           /* console.log(ban, banDos);*/
+            if (ban === vectorPalabra[x]) {
+                if (banDos == 1) {
+                    $("#lUno").addClass("correcta");
+                }
+                if (banDos == 2) {
+                    $("#lDos").addClass("correcta");
+                }
+                if (banDos == 3) {
+                    $("#lTres").addClass("correcta");
+                }
+                if (banDos == 4) {
+                    $("#lCuatro").addClass("correcta");
+                }
+                if (banDos == 5) {
+                    $("#lCinco").addClass("correcta");
+                }
+                
             }
         }
     }
