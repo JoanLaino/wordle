@@ -36,3 +36,15 @@
 .correcta {
     background-color: springgreen;
 }
+
+.casiCorrecta {
+    background-color: #EC9C3C;
+}
+
+.deshabilitado {
+    cursor: not-allowed;
+    background-color: gray;
+    border: 2px solid #343434;
+    pointer-events: none;
+}
+ 

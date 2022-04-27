@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <link rel="stylesheet" href="css/style.css">
 
     <title>Wordle</title>
@@ -21,7 +24,39 @@
             <input type="text" class="stl-letra" maxlength="1" id="lCinco" />
         </div>
 
-        <button class="stl-button" id="btnEnviar">Enviar</button>
+        <div class="stl-palabra">
+            <input type="text" class="stl-letra in-letra" maxlength="1" id="lUnoDos" />
+            <input type="text" class="stl-letra" maxlength="1" id="lDosDos" />
+            <input type="text" class="stl-letra" maxlength="1" id="lTresDos" />
+            <input type="text" class="stl-letra" maxlength="1" id="lCuatroDos" />
+            <input type="text" class="stl-letra" maxlength="1" id="lCincoDos" />
+        </div>
+
+        <div class="stl-palabra">
+            <input type="text" class="stl-letra in-letra" maxlength="1" id="lUnoTres" />
+            <input type="text" class="stl-letra" maxlength="1" id="lDosTres" />
+            <input type="text" class="stl-letra" maxlength="1" id="lTresTres" />
+            <input type="text" class="stl-letra" maxlength="1" id="lCuatroTres" />
+            <input type="text" class="stl-letra" maxlength="1" id="lCincoTres" />
+        </div>
+
+        <div class="stl-palabra">
+            <input type="text" class="stl-letra in-letra" maxlength="1" id="lUnoCuatro" />
+            <input type="text" class="stl-letra" maxlength="1" id="lDosCuatro" />
+            <input type="text" class="stl-letra" maxlength="1" id="lTresCuatro" />
+            <input type="text" class="stl-letra" maxlength="1" id="lCuatroCuatro" />
+            <input type="text" class="stl-letra" maxlength="1" id="lCincoCuatro" />
+        </div>
+
+        <div class="stl-palabra">
+            <input type="text" class="stl-letra in-letra" maxlength="1" id="lUnoCinco" />
+            <input type="text" class="stl-letra" maxlength="1" id="lDosCinco" />
+            <input type="text" class="stl-letra" maxlength="1" id="lTresCinco" />
+            <input type="text" class="stl-letra" maxlength="1" id="lCuatroCinco" />
+            <input type="text" class="stl-letra" maxlength="1" id="lCincoCinco" />
+        </div>
+
+        <button class="stl-button deshabilitado" id="btnEnviar">Enviar</button>
     </center>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
