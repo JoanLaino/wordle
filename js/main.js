@@ -5,6 +5,7 @@ var palabraReal = "preso";
 var vectorPalabra = palabraReal.split('');
 
 function primerCuadro() {
+    $("#lUno").prop("disabled", false);
     $("#lUno").focus();
     $("#lDos").prop("disabled", true);
     $("#lTres").prop("disabled", true);
@@ -31,6 +32,8 @@ function primerCuadro() {
     $("#lCuatroCinco").prop("disabled", true);
     $("#lCincoCinco").prop("disabled", true);
 
+    $(".stl-letra").removeClass("correcta");
+    $(".stl-letra").removeClass("casiCorrecta");    
 }
 
 const esLetra = (caracter) => {
@@ -41,12 +44,17 @@ const esLetra = (caracter) => {
     return false;
 };
 
+
+
 var banderaPosicion = 1;
 
 $("input").on("keyup", function () {
-
+   
     
-    let letra = $(".in-letra").val();
+    let letra = $(this).val();
+    if (letra == "Delete") {
+        alert("Anda");
+    }
     let ascii = letra.toUpperCase().charCodeAt(0);
     if (ascii > 64 && ascii < 91) {      
 
@@ -175,11 +183,12 @@ $("input").on("keyup", function () {
                 $("#lCincoCinco").focus();
                 $("#lCuatroCinco").prop("disabled", true);
                 if ($("#lCincoCinco").val() != '') {
-                    $("#btnEnviar").removeClass("deshabilitado");
+                    $("#btnEnviar").removeClass("deshabilitado");                    
                 }
             }
         }
-    }
+    }   
+    
 });
 
 function contarCaracteres(palabra) {
@@ -271,6 +280,8 @@ function validarUno() {
     }
     if (validarFinal == 5) {
         swal("Ganaste!");
+        $("#btnJugarNuevo").removeClass("off");
+        $("#btnEnviar").addClass("off");
     }    
 }
 
@@ -354,6 +365,8 @@ function validarDos() {
     }
     if (validarFinal == 5) {
         swal("Ganaste!");
+        $("#btnJugarNuevo").removeClass("off");
+        $("#btnEnviar").addClass("off");
     }
 }
 
@@ -437,6 +450,8 @@ function validarTres() {
     }
     if (validarFinal == 5) {
         swal("Ganaste!");
+        $("#btnJugarNuevo").removeClass("off");
+        $("#btnEnviar").addClass("off");
     } 
 }
 
@@ -521,6 +536,8 @@ function validarCuatro() {
 
     if (validarFinal == 5) {
         swal("Ganaste!");
+        $("#btnJugarNuevo").removeClass("off");
+        $("#btnEnviar").addClass("off");
     } 
 }
 
@@ -605,8 +622,13 @@ function validarCinco() {
 
     if (validarFinal == 5) {
         swal("Ganaste!");
+        $("#btnJugarNuevo").removeClass("off");
+        $("#btnEnviar").addClass("off");
+
     } else {
         swal("Esta vez no se pudo, intentalo de vuelta...");
+        $("#btnJugarNuevo").removeClass("off");
+        $("#btnEnviar").addClass("off");
     }
 }
 
@@ -622,7 +644,7 @@ $('#btnEnviar').on('click', function (event) {
         $("#lCinco").prop("disabled", true);
         $("#btnEnviar").addClass("deshabilitado");
         banderaPosicion++;
-        contColumna++;
+        contColumna++;        
     } else if (contColumna == 2) {
         validarDos();
         $("#lUnoTres").prop("disabled", false);
@@ -654,4 +676,13 @@ $('#btnEnviar').on('click', function (event) {
         contColumna = 1;
     }    
     
+});
+
+$('#btnJugarNuevo').on('click', function (event){
+    $("#btnJugarNuevo").addClass("off");
+    $("#btnEnviar").removeClass("off");
+    $('input[type="text"]').val('');
+    primerCuadro();
+    contColumna = 1;
+    banderaPosicion = 1;
 });

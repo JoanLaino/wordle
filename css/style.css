@@ -33,6 +33,24 @@
     transition-delay: 0.1s;
 }
 
+.stl-button-2 {
+    margin-top: 5%;
+    font-size: 20px;
+    border: 2px solid #01620A;
+    border-radius: 5px;
+    background-color: #2DA50A;
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 8px;
+}
+
+.stl-button-2:hover {
+    cursor: pointer;
+    background-color: #FFFFFF;
+    color: #2DA50A;
+    transition-delay: 0.1s;
+}
+
 .correcta {
     background-color: springgreen;
 }
@@ -47,4 +65,7 @@
     border: 2px solid #343434;
     pointer-events: none;
 }
- 
+
+.off {
+    display: none;
+}

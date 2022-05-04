@@ -1,0 +1,3 @@
+-Que se pueda borrar.
+LISTO-Cuando termine el juego que se reinicie.
+-Un pop-up explicativo del juego.
