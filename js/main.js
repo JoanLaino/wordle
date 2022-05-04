@@ -50,11 +50,16 @@ var banderaPosicion = 1;
 
 $("input").on("keyup", function () {
    
-    
+   
     let letra = $(this).val();
+
     if (letra == "Delete") {
         alert("Anda");
     }
+    if (letra != undefined) {
+        $(this).addClass("seleccion");
+    }
+    
     let ascii = letra.toUpperCase().charCodeAt(0);
     if (ascii > 64 && ascii < 91) {      
 
@@ -681,6 +686,7 @@ $('#btnEnviar').on('click', function (event) {
 $('#btnJugarNuevo').on('click', function (event){
     $("#btnJugarNuevo").addClass("off");
     $("#btnEnviar").removeClass("off");
+    $(".stl-letra").removeClass("seleccion");
     $('input[type="text"]').val('');
     primerCuadro();
     contColumna = 1;
