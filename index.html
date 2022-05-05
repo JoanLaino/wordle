@@ -9,6 +9,9 @@
     <!-- SweetAlert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <link rel="stylesheet" href="css/style.css">
 
     <title>Wordle</title>
@@ -16,7 +19,8 @@
 <body>
 
     <center>
-        <div class="stl-palabra">
+        <p class="stl-ttl animate__animated animate__backInDown">Wordle</p>
+        <div class="stl-palabra animate__animated animate__rotateInDownLeft">
             <input type="text" class="stl-letra in-letra" maxlength="1" id="lUno" />
             <input type="text" class="stl-letra in-letra" maxlength="1" id="lDos" />
             <input type="text" class="stl-letra in-letra" maxlength="1" id="lTres" />
@@ -24,7 +28,7 @@
             <input type="text" class="stl-letra in-letra" maxlength="1" id="lCinco" />
         </div>
 
-        <div class="stl-palabra">
+        <div class="stl-palabra animate__animated animate__shakeX">
             <input type="text" class="stl-letra in-letra" maxlength="1" id="lUnoDos" />
             <input type="text" class="stl-letra" maxlength="1" id="lDosDos" />
             <input type="text" class="stl-letra" maxlength="1" id="lTresDos" />
@@ -32,7 +36,7 @@
             <input type="text" class="stl-letra" maxlength="1" id="lCincoDos" />
         </div>
 
-        <div class="stl-palabra">
+        <div class="stl-palabra animate__animated animate__shakeX">
             <input type="text" class="stl-letra in-letra" maxlength="1" id="lUnoTres" />
             <input type="text" class="stl-letra" maxlength="1" id="lDosTres" />
             <input type="text" class="stl-letra" maxlength="1" id="lTresTres" />
@@ -40,7 +44,7 @@
             <input type="text" class="stl-letra" maxlength="1" id="lCincoTres" />
         </div>
 
-        <div class="stl-palabra">
+        <div class="stl-palabra animate__animated animate__shakeX">
             <input type="text" class="stl-letra in-letra" maxlength="1" id="lUnoCuatro" />
             <input type="text" class="stl-letra" maxlength="1" id="lDosCuatro" />
             <input type="text" class="stl-letra" maxlength="1" id="lTresCuatro" />
@@ -48,7 +52,7 @@
             <input type="text" class="stl-letra" maxlength="1" id="lCincoCuatro" />
         </div>
 
-        <div class="stl-palabra">
+        <div class="stl-palabra animate__animated animate__rotateInUpRight">
             <input type="text" class="stl-letra in-letra" maxlength="1" id="lUnoCinco" />
             <input type="text" class="stl-letra" maxlength="1" id="lDosCinco" />
             <input type="text" class="stl-letra" maxlength="1" id="lTresCinco" />
@@ -56,8 +60,8 @@
             <input type="text" class="stl-letra" maxlength="1" id="lCincoCinco" />
         </div>
 
-        <button class="stl-button deshabilitado" id="btnEnviar">Enviar</button>
-        <button class="stl-button-2 off" id="btnJugarNuevo">¡Jugar de nuevo!</button>
+        <button class="stl-button deshabilitado animate__animated animate__bounceInLeft" id="btnEnviar">Enviar</button>
+        <button class="stl-button-2 off animate__animated animate__fadeIn" id="btnJugarNuevo">¡Jugar de nuevo!</button>
     </center>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
