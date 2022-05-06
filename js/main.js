@@ -1,6 +1,8 @@
 $(window).on("load", primerCuadro);
 
-var palabraReal = "preso";
+const palabras = ["preso", "clavo", "fruta", "parto", "culpa", "poste"];
+
+var palabraReal = palabras[Math.floor(Math.random() * palabras.length)];
 
 var vectorPalabra = palabraReal.split('');
 
@@ -691,4 +693,6 @@ $('#btnJugarNuevo').on('click', function (event){
     primerCuadro();
     contColumna = 1;
     banderaPosicion = 1;
+    palabraReal = palabras[Math.floor(Math.random() * palabras.length)];
+    vectorPalabra = palabraReal.split('');
 });
